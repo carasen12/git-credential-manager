@@ -1,9 +1,24 @@
+/// <summary>
+/// Provides Visual Studio Code debug configurations for .NET Core and Git Credential Manager.
+/// </summary>
+/// <remarks>
+/// This launch configuration supports:
+/// - Attaching to a .NET Core process
+/// - Debugging Git Credential Manager 'get' operation
+/// - Debugging Git Credential Manager 'store' operation
+/// - Attaching to a .NET process by selecting from running processes
+/// </remarks>
 {
    // Use IntelliSense to find out which attributes exist for C# debugging
    // Use hover for the description of the existing attributes
    // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
    "version": "0.2.0",
    "configurations": [
+    {
+        "name": ".NET Core Attach",
+        "type": "coreclr",
+        "request": "attach"
+    },
         {
             "name": "Git Credential Manager (get)",
             "type": "coreclr",
